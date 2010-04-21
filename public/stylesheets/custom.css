@@ -154,6 +154,25 @@ ul.users {
   list-style: none;
 }
 
+ul.posts {
+  
+}
+
+.posts li {
+  list-style: none;
+  background: #cfc;
+  padding: 1em;
+  margin-bottom: 15px;
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+}
+
+.post-date {
+  font-size: 75%;
+  color: #444;
+}
+
+
 /* Error handling */
 
 .fieldWithErrors {

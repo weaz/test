@@ -9,6 +9,17 @@
     <td class="sidebar round">
       <strong>Name</strong> <%= h @user.name %><br />
       <strong>URL</strong>  <%= link_to user_path(@user), @user %>
+    <% if current_user?(@user) %>
+      <br />
+      <strong><%= link_to "Add new post", newpost_path %></strong>
+    <% end %>
+    </td>
+  </tr>
+  <tr>
+    <td class="main">
+    <ul class="posts">
+      <%= render @user.posts.reverse %>
+    </ul>
     </td>
   </tr>
 </table>

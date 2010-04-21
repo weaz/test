@@ -1,0 +1,13 @@
+<h2>New post</h2>
+
+<% form_for(@post) do |f| %>
+  <%= f.error_messages %>
+  <div class="field">
+    <%= f.label :body %><br />
+    <%= f.text_field :body, :size => "60" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Add post" %>
+  </div>
+<% end %>
+
