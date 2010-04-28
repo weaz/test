@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20100409192223
+# Schema version: 20100423151640
 #
 # Table name: users
 #
@@ -19,6 +19,7 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation
 
   has_many :posts
+  has_many :points
   
   EmailRegex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 

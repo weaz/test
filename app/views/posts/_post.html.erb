@@ -1,6 +1,14 @@
 <li>
+<div class="post-rating">
+    <span class=""><%= post.points.count%></span>
+    <br />
+    <%= link_to "&#43;", points_url(Point.new, :post_id => post.id), :method => :post %>
+    &#47;&#45;
+</div>
+
   <%= h post.body %>
   <br/>
   <span class="post-date">posted <%= time_ago_in_words(post.created_at) %> ago</span>
+  <span class="post-user">by <%= link_to h(post.user.name), post.user %></span>
 </li>
 

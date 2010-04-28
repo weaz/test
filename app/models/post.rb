@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20100409192223
+# Schema version: 20100423151640
 #
 # Table name: posts
 #
@@ -15,6 +15,7 @@ class Post < ActiveRecord::Base
   attr_accessible :body, :user, :created_at
 
   belongs_to :user
+  has_many :points
 
   validates_presence_of :body
   validates_length_of   :body, :maximum => 160

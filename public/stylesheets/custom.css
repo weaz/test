@@ -172,6 +172,16 @@ ul.posts {
   color: #444;
 }
 
+.post-user {
+  font-size: 75%;
+  color: #444;
+}
+
+.post-rating {
+  float: right;
+  font-size: 150%;
+  color: #000;
+}
 
 /* Error handling */
 

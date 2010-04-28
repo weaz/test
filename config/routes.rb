@@ -42,6 +42,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
   map.resources :sessions, :only => [:new, :create, :destroy]
   map.resources :posts
+  map.resources :points, :only => [:new, :create, :destroy]
 
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'

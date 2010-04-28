@@ -12,6 +12,9 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.build(params[:post])
     if @post.save
+      point = @post.points.build
+      point.user_id = current_user.id
+      point.save
       flash[:success] = "New post added!"
       redirect_to current_user
     else
@@ -19,6 +22,12 @@ class PostsController < ApplicationController
       render 'new'
     end  
   end
+
+  def index
+    @title = "All posts"
+    @posts = Post.paginate(:page => params[:page])
+  end
+
 
   private
 

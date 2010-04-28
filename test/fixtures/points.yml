@@ -1,11 +1,12 @@
 # == Schema Information
 # Schema version: 20100423151640
 #
-# Table name: posts
+# Table name: points
 #
 #  id         :integer         not null, primary key
-#  body       :string(255)
-#  user_id    :integer
+#  value      :integer         default(1)
+#  post_id    :integer         not null
+#  user_id    :integer         not null
 #  created_at :datetime
 #  updated_at :datetime
 #
@@ -13,11 +14,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  title: MyString
-  body: MyText
+  value: 1
+  post: 
   user: 
 
 two:
-  title: MyString
-  body: MyText
+  value: 1
+  post: 
   user: 
